@@ -727,6 +727,9 @@ struct max_cpu_capacity {
 	int cpu;
 };
 
+/* Scheduling group status flags */
+#define SG_OVERLOAD             0x1 /* More than one runnable task on a CPU. */
+
 struct perf_domain {
 	struct em_perf_domain *em_pd;
 	struct perf_domain *next;
