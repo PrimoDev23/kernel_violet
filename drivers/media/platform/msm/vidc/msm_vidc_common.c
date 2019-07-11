@@ -24,6 +24,8 @@
 #include "msm_vidc_clocks.h"
 #include "msm_cvp.h"
 
+static struct kmem_cache *kmem_buf_pool;
+
 #define MSM_VIDC_QBUF_BATCH_TIMEOUT 300
 
 static struct kmem_cache *kmem_buf_pool;
