@@ -3393,23 +3393,18 @@ irqreturn_t cam_ife_csid_irq(int irq_num, void *data)
 	if (csid_hw->device_enabled == 1) {
 		if (irq_status_rx & CSID_CSI2_RX_ERROR_LANE0_FIFO_OVERFLOW) {
 			fatal_err_detected = true;
-			goto handle_fatal_error;
 		}
 		if (irq_status_rx & CSID_CSI2_RX_ERROR_LANE1_FIFO_OVERFLOW) {
 			fatal_err_detected = true;
-			goto handle_fatal_error;
 		}
 		if (irq_status_rx & CSID_CSI2_RX_ERROR_LANE2_FIFO_OVERFLOW) {
 			fatal_err_detected = true;
-			goto handle_fatal_error;
 		}
 		if (irq_status_rx & CSID_CSI2_RX_ERROR_LANE3_FIFO_OVERFLOW) {
 			fatal_err_detected = true;
-			goto handle_fatal_error;
 		}
 		if (irq_status_rx & CSID_CSI2_RX_ERROR_TG_FIFO_OVERFLOW) {
 			fatal_err_detected = true;
-			goto handle_fatal_error;
 		}
 		if (irq_status_rx & CSID_CSI2_RX_ERROR_CPHY_EOT_RECEPTION) {
 			csid_hw->error_irq_count++;
