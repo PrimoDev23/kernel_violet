@@ -3426,6 +3426,7 @@ irqreturn_t cam_ife_csid_irq(int irq_num, void *data)
 		csid_hw->error_irq_count = 0;
 	}
 
+handle_fatal_error:
 	spin_unlock_irqrestore(&csid_hw->lock_state, flags);
 	if (fatal_err_detected) {
 		CAM_INFO(CAM_ISP,
