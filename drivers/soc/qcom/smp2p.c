@@ -639,8 +639,6 @@ static int qcom_smp2p_probe(struct platform_device *pdev)
 			list_add(&entry->node, &smp2p->outbound);
 		}
 	}
-	wakeup_source_init(&smp2p->ws, "smp2p");
-
 	/* Kick the outgoing edge after allocating entries */
 	qcom_smp2p_kick(smp2p);
 
