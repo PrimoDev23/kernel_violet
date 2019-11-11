@@ -515,7 +515,7 @@ static int ovl_create_or_link(struct dentry *dentry, struct inode *inode,
 							hardlink);
 	}
 out_revert_creds:
-	old_revert_creds(old_cred ?: hold_cred);
+	ovl_revert_creds(old_cred ?: hold_cred);
 	if (old_cred && hold_cred)
 		put_cred(hold_cred);
 	if (!err) {
