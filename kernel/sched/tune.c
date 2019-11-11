@@ -757,7 +757,6 @@ static void write_default_values(struct cgroup_subsys_state *css)
 		{ "foreground",	0, 1, 0, 1 },
 		{ "rt",		0, 0, 0, 0 },
 		{ "top-app",	1, 1, 0, 1 }};
-	};
 	int i;
 
 	for (i = 0; i < ARRAY_SIZE(st_targets); i++) {
